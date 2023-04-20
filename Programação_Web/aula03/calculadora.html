@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <p>Primeiro valor</p>
+    <input id="primeiro-input"></input>
+    <p>Segundo valor</p>
+    <input id="segundo-input"></input>
+    <p>Resultado</p>
+    <p id="resultado"></p>
+
+    <br>
+    <br>
+    <button id="btn-soma">Soma</button>
+    <button id="btn-subtracao">Subtração</button>
+    <br>
+    <button id="btn-divisao">Divisão</button>
+    <button id="btn-multiplicacao">Multiplicação</button>
+
+    <script>
+        let primeiro_valor      = document.querySelector('#primeiro-input');
+        let segundo_valor       = document.querySelector('#segundo-input'); 
+        let resultadoElement    = document.querySelector('#resultado');
+        let soma                = document.querySelector('#btn-soma');
+        let subtracao           = document.querySelector('#btn-subtracao');
+        let divisao             = document.querySelector('#btn-divisao');
+        let multiplicacao       = document.querySelector('#btn-multiplicacao');
+
+        
+
+        soma.addEventListener('click', function() {
+            let valor1 = Number(primeiro_valor.value);
+            let valor2 = Number(segundo_valor.value);
+            resultado = valor1 + valor2;
+            resultadoElement.textContent = `Resultado da soma: ${resultado}`;
+        });
+        subtracao.addEventListener('click', function() {
+            let valor1 = Number(primeiro_valor.value);
+            let valor2 = Number(segundo_valor.value);
+            resultado = valor1 - valor2;
+            resultadoElement.textContent = `Resultado da soma: ${resultado}`;
+        });
+        divisao.addEventListener('click', function() {
+            let valor1 = Number(primeiro_valor.value);
+            let valor2 = Number(segundo_valor.value);
+            resultado = valor1 / valor2;
+            resultadoElement.textContent = `Resultado da soma: ${resultado}`;
+        });
+        multiplicacao.addEventListener('click', function() {
+            let valor1 = Number(primeiro_valor.value);
+            let valor2 = Number(segundo_valor.value);
+            resultado = valor1 * valor2;
+            resultadoElement.textContent = `Resultado da soma: ${resultado}`;
+        });
+    </script>
+</body>
+</html>
